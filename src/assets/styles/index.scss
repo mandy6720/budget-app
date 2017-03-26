@@ -1,0 +1,182 @@
+/**
+ *  Do not remove the comments below. It's the markers used by wiredep to inject
+ *  sass dependencies when defined in the bower.json of your dependencies
+ */
+// bower:scss
+// endbower
+
+/*----------------------------------------
+[Table of Contents]
+
+  1. Variables
+  2. Bootstrap overrides
+  3. Global
+  4. Main
+----------------------------------------*/
+
+/*----------------------------------------
+  1. Variables
+----------------------------------------*/
+
+$off-black: #222;
+$black: #000;
+$grey: #ccc;
+$white: #fff;
+$off-white: #eee;
+
+/*----------------------------------------
+  2. Bootstrap overrides
+----------------------------------------*/
+
+$navbar-inverse-link-color: #5AADBB;
+$icon-font-path: "../../bower_components/bootstrap-sass/assets/fonts/bootstrap/";
+
+.btn-default,
+.btn-default:visited {
+  background-color: transparent;
+  color: #eee;
+  font-weight: lighter;
+  &:hover,
+  &:focus,
+  &.active-option {
+    background-color: $off-black;
+    color: #eee;
+    border-color: transparent;
+    font-weight: lighter;
+  }
+}
+.form-control,
+.input-group-addon {
+  opacity: .5;
+}
+.btn-group {
+  margin-bottom: 14px;
+}
+
+/*----------------------------------------
+  3. Global
+----------------------------------------*/
+
+.browsehappy {
+  margin: 0.2em 0;
+  background: $grey;
+  color: $black;
+  padding: 0.2em 0;
+}
+
+/*----------------------------------------
+  4. Main
+----------------------------------------*/
+body {
+  back-ground-color: #36D7B7;
+  background-image: -webkit-linear-gradient(top, #A8C179, #36D7B7); /* For Chrome 25 and Safari 6, iOS 6.1, Android 4.3 */
+  background-image:    -moz-linear-gradient(top, #A8C179, #36D7B7); /* For Firefox (3.6 to 15) */
+  background-image:      -o-linear-gradient(top, #A8C179, #36D7B7); /* For old Opera (11.1 to 12.0) */ 
+  background-image: linear-gradient(to top, #A8C179, #36D7B7);
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  height: 100vh;
+  header {
+    h1, 
+    h3, 
+    p,
+    #main-header {
+      color: $off-white;
+      font-weight: lighter;
+    }
+    .panel {
+    margin-top: 10px;
+      h3 {
+        color: $off-black;
+      }
+    }
+    h1 {
+      display: block;
+      font-size: 2.75em;
+      font-weight: 500;
+    }
+    height: 100%;
+    padding: 10px 0;
+    text-align: center;
+    .panel {
+      color: $off-black;
+      h3 {
+        margin-top: 10px;
+      }
+    }
+  }
+  #goal-name-input {
+    margin-bottom: 10px;
+  }
+  .date-picker-container {
+    position: relative;
+    display: inline-block;
+    margin-bottom: 20px;
+    color: $off-black;
+  }
+  .error-message {
+    font-weight: bold;
+    color: #EF4836;
+    margin-top: 8px;
+  }
+  .editable {
+    display: inline-block;
+    margin: 14px 0;
+    margin-left: 12px;
+    font-size: 1.2em;
+  }
+  .optional {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .edit-icon {
+    opacity: .65;
+  }
+  .input-group {
+    .edit-amount-input {
+      width: 82%;
+      margin-right: 5px;
+    }
+  } 
+  .next-date-picker {
+    margin-top: 10px;
+    margin-left: 10px;
+  }
+}
+
+@media (min-width: 768px) {
+  header h1 {
+    font-size: 4.75em;
+  }
+  .flex-container {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+  }
+  .date-picker-wrapper {
+    margin-bottom: 10px
+  }
+  .navbar {
+    border-radius: 0px;
+  }
+  .optional {
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  .hidden {
+    display: none;
+  }
+  .input-group {
+    .edit-amount-input {
+      width: 82%;
+    }
+  } 
+}
+
+/**
+ *  Do not remove the comments below. It's the markers used by gulp-inject to inject
+ *  all your sass files automatically
+ */
+// injector
+// endinjector

@@ -1,0 +1,39 @@
+<header>
+  <div class="container-fluid">
+    <div class="flex-container">
+      <div class="row">
+        <div class="col-lg-8 col-lg-offset-2">
+            <h1 id="main-header">Hi there!</h1>
+            <h3>Take a second to think about that one thing you <em>really</em> want.</h3>
+            <p>(You know the one)</p>
+        </div>
+      </div>
+      <div class="row" >
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+          <input class="form-control" type="text" placeholder="What are you saving for?" id="goal-name-input" ng-model="vm.goal.name">
+        </div>
+        <div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3">
+          <div class="input-group">
+            <span class="input-group-addon" id="basic-addon1">$</span>
+            <input class="form-control" type="number" placeholder="How much is it?" id="goal-amount-input" ng-model="vm.goal.amount">
+          </div>
+        </div>
+      </div>
+      <div class="row">
+        <h3>When do you need it by?</h3>
+        <div class="col-md-10 col-md-offset-1">
+          <div class="date-picker-container">
+            <input class="form-control" date-time format="MMMM D, YYYY" ng-model="vm.goal.date" min-view="date" auto-close='true'>
+          </div>
+        </div>  
+      </div>
+      <div class="row">
+        <button type="button" class="btn btn-default btn-lg" ng-click="vm.getPayments()">Let's do this!</button>
+      </div>
+      <div>
+        <p class="error-message" ng-show="vm.errorMessage">* Please enter {{vm.errorMessage}}</p>
+      </div>
+    </div>
+  </div>
+</header>
+

@@ -1,0 +1,57 @@
+<header>
+  <div class="container-fluid">
+    <div class="flex-container">
+      <div class="row">
+	      <div class="col-lg-8 col-lg-offset-2">
+	          <h1 id="main-header">{{vm.goal.name}} Savings Plan</h1>
+	          <h3>If you start saving today, you can definitely save 
+	          	<br /><span class="editable" ng-show="!vm.editAmount">${{vm.goal.amount}} </span>
+	          	<span class="edit-icon edit-icon-amount" ng-click="vm.editAmt()"><i class="fa fa-pencil"></i></span>
+	          	<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3 optional" ng-show="vm.editAmount">
+			          <div class="input-group">
+			            <span class="input-group-addon" id="basic-addon1">$</span>
+			            <input class="form-control edit-amount-input" type="number" placeholder="New amount?" id="goal-amount-input" ng-model="vm.goal.amount">
+			            <span class="edit-icon edit-icon-amount" ng-click="vm.editAmt('off')"> <i class="fa fa-check"></i></span>
+			          </div>
+			        </div>
+	          	<div class="col-xs-12">
+	          		by
+	          	</div>
+	          	<span class="editable col-xs-12" ng-show="!vm.editDate">{{vm.goal.dateFormatted}} <span class="edit-icon edit-icon-date" ng-click="vm.changeDate()"><i class="fa fa-pencil"></i></span></span>
+
+	          	<div class="col-xs-10 col-xs-offset-1 col-md-6 col-md-offset-3" ng-show="vm.editDate">
+				        
+			          <div class="date-picker-container next-date-picker">
+			            <input class="form-control" date-time format="MMMM D, YYYY" ng-model="vm.newGoalDate" min-view="date" auto-close='true'>
+			          </div>
+			          <span class="edit-icon edit-icon-date" ng-click="vm.changeDate('off')"> <i class="fa fa-check"></i></span>
+         
+				      </div>
+				      <div class="col-xs-12">
+	          		if you pay
+	          	</div></h3>
+	      </div>
+	    </div>
+	    <div class="row">
+	    	<div class="col-md-4 col-md-offset-4 col-xs-10 col-xs-offset-1">
+	    		<div class="panel panel-default">
+					  <div class="panel-body">
+					    <h3>${{vm.formattedAmt}}</h3>
+					  </div>
+					</div>
+	    	</div>
+	    </div>
+	    <div class="row">
+	    	<div class="btn-group" role="group" aria-label="Payment increments">
+				  <button type="button" class="btn btn-default payment-option-button" ng-click="vm.setOption('Weekly')">Weekly</button>
+				  <button type="button" class="btn btn-default payment-option-button" ng-click="vm.setOption('BiWeekly')">Bi-Monthly</button>
+				  <button type="button" class="btn btn-default payment-option-button active-option" ng-click="vm.setOption('Monthly')">Monthly</button>
+				</div>
+	    </div>
+	    
+	    <div class="row">
+	      <button type="button" class="btn btn-default btn-lg" ng-click="vm.goBack()">Go Back!</button>
+	    </div>
+    </div>
+  </div>
+</header>
